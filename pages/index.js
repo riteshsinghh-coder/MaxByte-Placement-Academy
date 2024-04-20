@@ -7,9 +7,6 @@ import PlacementPage from '../components/PlacementPage';
 import PopularClass from '../components/PopularClass';
 import Services from '../components/Services';
 import Testimonials from '../components/Testimonials';
-import dynamic from 'next/dynamic';
-
-const DynamicVideoSection = dynamic(() => import('../components/VideoSection'), { ssr: false });
 
 export default function Home() {
   return (
@@ -44,8 +41,7 @@ export default function Home() {
       <Testimonials />
       <Placed />
       <Footer />
-      {/* Video Section */}
-      <DynamicVideoSection />
+      
     </div>
   );
 }
