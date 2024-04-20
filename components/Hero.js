@@ -61,21 +61,21 @@ const Hero = () => {
           </div>
           <div className="flex gap-6 items-center pt-6">
             <div className="flex gap-2 items-center">
-                <image src="/assets/public.svg" alt="" />
+                <img src="/assets/public.svg" alt="" />
                 <p>Public Speaking</p>
             </div>
             <div className="flex gap-2 items-center">
-                <image src="/assets/career.svg" alt="" />
+                <img src="/assets/career.svg" alt="" />
                 <p>Career Oriented</p>
             </div>
             <div className="flex gap-2 items-center">
-                <image src="/assets/think.svg" alt="" />
+                <img src="/assets/think.svg" alt="" />
                 <p>Creative Thinking</p>
             </div>
           </div>
         </div>
 
-        <image src="/assets/hero.png" alt="" />
+        <img src="/assets/hero.png" alt="" />
       </div>
       
       {/* Enrollment Modal */}

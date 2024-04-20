@@ -39,7 +39,7 @@ class PlacementPage extends React.Component {
       <div className="grid grid-cols-1 sm:grid-cols-5 md:grid-cols-9 ">
         {this.state.placements.map(placement => (
           <div key={placement.id} className="bg-white shadow-md rounded-lg p-4 flex flex-col items-center">
-            <image src={placement.logoUrl} className="h-24 w-auto object-contain md:h-30 md:w-auto" />
+            <img src={placement.logoUrl} className="h-24 w-auto object-contain md:h-30 md:w-auto" />
            
           </div>
         ))}
