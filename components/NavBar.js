@@ -79,7 +79,7 @@ const NavBar = () => {
     <div className='mx-auto'>
       <div className="container mx-auto flex flex-col lg:flex-row py-2 justify-between items-center">
         {/* Logo */}
-        <img src="/assets/logo.png" alt="logo" className="w-25 h-24" />
+        <image src="/assets/logo.png" alt="logo" className="w-25 h-24" />
 
         {/* Navigation */}
         <div className="flex items-center gap-4">

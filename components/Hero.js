@@ -6,7 +6,6 @@ const Hero = () => {
   const [enrollmentData, setEnrollmentData] = useState({ name: '', phone: '' });
   const whatsappGroupLink = "https://chat.whatsapp.com/JeKWQKQFZc5GbbPOE4oS9k";
 
-
   // Function to open the enrollment modal
   const openEnrollmentModal = () => {
     setIsModalOpen(true);
@@ -56,27 +55,27 @@ const Hero = () => {
             >
               Get Started
             </button>
-            <a href={whatsappGroupLink} target="_blank" className="btn bg-purple-100 text-purple-500 border-none capitalize btn-lg">
+            <a href={whatsappGroupLink} target="_blank" rel="noreferrer" className="btn bg-purple-100 text-purple-500 border-none capitalize btn-lg">
               Get Free Trial
             </a>
           </div>
           <div className="flex gap-6 items-center pt-6">
             <div className="flex gap-2 items-center">
-                <img src="/assets/public.svg" alt="" />
+                <image src="/assets/public.svg" alt="" />
                 <p>Public Speaking</p>
             </div>
             <div className="flex gap-2 items-center">
-                <img src="/assets/career.svg" alt="" />
+                <image src="/assets/career.svg" alt="" />
                 <p>Career Oriented</p>
             </div>
             <div className="flex gap-2 items-center">
-                <img src="/assets/think.svg" alt="" />
+                <image src="/assets/think.svg" alt="" />
                 <p>Creative Thinking</p>
             </div>
           </div>
         </div>
 
-        <img src="/assets/hero.png" alt="" />
+        <image src="/assets/hero.png" alt="" />
       </div>
       
       {/* Enrollment Modal */}

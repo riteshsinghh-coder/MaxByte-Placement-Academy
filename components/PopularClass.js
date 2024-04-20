@@ -12,7 +12,7 @@ const PopularClass = () => {
   const service = [
     {
       id: 1,
-      img: "/assets/Basic.jpg",
+      image: "/assets/Basic.jpg",
       title: "Basic",
       sub: "Lessons on design that cover the most recent developments.",
       view:"5634",
@@ -22,7 +22,7 @@ const PopularClass = () => {
     },
     {
       id: 2,
-      img: "/assets/Placement.jpg",
+      image: "/assets/Placement.jpg",
       title: "Placement Program",
       sub: "Lessons on design that cover the most recent developments.",
       view:"896",
@@ -32,7 +32,7 @@ const PopularClass = () => {
     },
     {
       id: 3,
-      img: "/assets/webdevelopment.jpg",
+      image: "/assets/webdevelopment.jpg",
       title: "Web  Development",
       sub: "Lessons on design that cover then most recent developments.",
       view:"1254",
@@ -57,7 +57,7 @@ const PopularClass = () => {
             key={ser.id}
             onClick={() => handleClassClick(ser.id)}
           >
-            <img className="w-full" src={ser.img} alt="services" />
+            <image className="w-full" src={ser.image} alt="services" />
             <div className="flex justify-between items-center">
               <p className="text-2xl group-hover:text-white font-semibold line-clamp-1">
                 {ser.title}
@@ -70,7 +70,7 @@ const PopularClass = () => {
             </p>
             <div className="flex items-center gap-2 group-hover:text-white">
               <p>{ser.rating}</p>
-              <img src="/assets/star.svg" alt="star" />
+              <image src="/assets/star.svg" alt="star" />
               <p>{ser.view}</p>
             </div>
             <div className="flex justify-between py-2">

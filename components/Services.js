@@ -9,37 +9,37 @@ const Services = () => {
     const service=[
         {
             id:1,
-            img:'/assets/ux.svg',
+            image:'/assets/ux.svg',
             title:'Basic',
             sub:'Lessons on design that cover the most recent developments.'
         },
         {
             id:3,
-            img:'/assets/web.svg',
+            image:'/assets/web.svg',
             title:'Web  Development',
             sub:'Lessons on design that cover then most recent developments.'
         },
         {
             id:2,
-            img:'/assets/market.svg',
+            image:'/assets/market.svg',
             title:'Placement Program',
             sub:'Lessons on design that cover then most recent developments.'
         },
         {
             id:4,
-            img:'/assets/market.svg',
+            image:'/assets/market.svg',
             title:'Android Development',
             sub:'Lessons on design that cover then most recent developments.'
         },
         { 
             id:5,
-            img:'/assets/market.svg',
+            image:'/assets/market.svg',
             title:'Cloud Computing',
             sub:'Lessons on design that cover then most recent developments.'
         },
         {
             id:6,
-            img:'/assets/market.svg',
+            image:'/assets/market.svg',
             title:'Artificial Intelligence and Machine Learning',
             sub:'Lessons on design that cover then most recent developments.'
         }
@@ -55,7 +55,7 @@ environment</p>
     return(
         <div className='px-6 py-8 rounded-xl bg-gray-50 hover:bg-purple-600 group border border-gray-300' key={i}>
             <div className="flex gap-3 items-center">
-            <img src={ser.img} alt="services" />
+            <image src={ser.image} alt="services" />
             <p className='text-2xl group-hover:text-white font-semibold '>{ser.title}</p>
             </div>
            

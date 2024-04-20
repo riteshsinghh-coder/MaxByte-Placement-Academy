@@ -1,5 +1,3 @@
-// pages/about.js
-
 import React from 'react';
 import NavBar from '../components/NavBar';
 
@@ -11,7 +9,7 @@ const AboutPage = () => {
     <div>
       <NavBar/>
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-4 text-purple-500">Welcome to MaxByte Placement Academy</h1>
+      <h1 className="text-3xl font-bold mb-4 text-purple-500">Welcome to MaxByte Placement Academy&apos;s</h1>
       <p className="text-lg mb-4">MaxByte Placement Academy is a leading institution dedicated to providing comprehensive IT education and career placement services. Our academy was founded with the vision of bridging the gap between education and industry, empowering individuals with the skills and knowledge needed to thrive in the fast-paced world of technology.</p>
       
       <h2 className="text-2xl font-bold mb-2 text-purple-500">Our Mission</h2>
@@ -24,10 +22,10 @@ const AboutPage = () => {
       <p className="text-lg mb-4">Our vision is to be the premier destination for IT education and career placement, recognized for our commitment to excellence, innovation, and student success. We aspire to empower individuals with the skills and confidence to thrive in the digital age and make meaningful contributions to society.</p>
       
       <h2 className="text-2xl font-bold mb-2 text-purple-500">Serving Our Country</h2>
-      <p className="text-lg mb-4">At MaxByte, we are proud to serve our country by equipping our students with the knowledge and skills needed to contribute to the growth and development of our nation's technology sector. Through education and opportunity, we aim to empower the next generation of tech leaders and innovators.</p>
+      <p className="text-lg mb-4">At MaxByte, we are proud to serve our country by equipping our students with the knowledge and skills needed to contribute to the growth and development of our nation&apos;s technology sector. Through education and opportunity, we aim to empower the next generation of tech leaders and innovators.</p>
       
       {/* Join Us Button */}
-      <a href={whatsappGroupLink} target="_blank" className="bg-purple-500 text-white font-bold py-2 px-4 rounded inline-block mt-4">Join Us on WhatsApp</a>
+      <a href={whatsappGroupLink} target="_blank" rel="noreferrer" className="bg-purple-500 text-white font-bold py-2 px-4 rounded inline-block mt-4">Join Us on WhatsApp</a>
     </div>
     </div>
   );

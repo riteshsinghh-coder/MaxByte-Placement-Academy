@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container mx-auto py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-10 text-white">
           <div className="flex flex-col gap-4">
-            <img src="/assets/logo.png" alt="" className="w-25 h-24" />
+            <image src="/assets/logo.png" alt="" className="w-25 h-24" />
             <p>Top learning experiences that create more talent in the world.</p>
           </div>  
           <div className="flex flex-col gap-5">
