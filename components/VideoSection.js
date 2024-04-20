@@ -18,7 +18,7 @@ export default function VideoSection() {
   return (
     <>
       {isOpen && (
-        <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.7)', zIndex: 999, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '50%', height: '50%', backgroundColor: 'rgba(0, 0, 0, 0.7)', zIndex: 999, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <div style={{ position: 'relative' }}>
             <video id="intro-video" autoPlay muted controls loop style={{ width: '50vw', maxWidth: '400px', height: 'auto' }}>
               <source src="/assets/lovely add.mp4" type="video/mp4" />
