@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+// components/Hero.js
+
+import React, { useState, useEffect } from 'react';
 import EnrollmentModal from './EnrollmentModal';
 
 const Hero = () => {
@@ -29,6 +31,18 @@ const Hero = () => {
     const { name, value } = e.target;
     setEnrollmentData({ ...enrollmentData, [name]: value });
   };
+
+  // Function to open the modal automatically if the URL contains "/getfreetrial"
+  const openModalIfNeeded = () => {
+    if (window.location.pathname === '/getfreetrial') {
+      openEnrollmentModal();
+    }
+  };
+
+  // Call the function when the component mounts
+  useEffect(() => {
+    openModalIfNeeded();
+  }, []);
 
   return (
     <div className="container mx-auto ">
