@@ -16,7 +16,7 @@ export default function Home() {
         <meta name="description" content="Unlock top-notch placement services and IT courses at MaxByte Placement Academy. Discover web development, IT job placements, and career advancement opportunities in Faridabad, Haryana." />
         <meta name="keywords" content="Placement center in Faridabad, IT jobs, Web development courses, Career advancement, Job placements, Wipro, Infosys, Amazon, Flipkart, Google, Microsoft, Jobs in Delhi NCR, Software engineering, Coding bootcamps, Tech certifications, Internships, IT training, Employment opportunities, Technology careers, Programming courses, Technical skills, Entry-level jobs, Web design, Data science, Cloud computing, Networking, Full-stack development, UI/UX design, Mobile app development, Java, Python, JavaScript, HTML/CSS, DevOps, Artificial intelligence, Machine learning, Big data, Blockchain, Internet of Things, Virtual reality, Augmented reality, Game development, Digital marketing, Project management, Agile, Scrum, Remote work, Freelancing, Resume building, Interview preparation, Soft skills, Leadership development, Career counseling, Job placement, Talent acquisition, Staffing, Industry partnerships, Networking events, IT job fairs, Recruitment drives, Career progression, Upskilling, Reskilling, Continuing education, Lifelong learning, Curriculum, Mentorship, Alumni network." />
         <link rel="canonical" href="https://maxbyteplacementacademy.in" />
-        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCM4HJ7JL8"></script>
         <script>
