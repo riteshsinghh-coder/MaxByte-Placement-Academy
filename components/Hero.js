@@ -8,44 +8,36 @@ const Hero = () => {
   const [enrollmentData, setEnrollmentData] = useState({ name: '', phone: '' });
   const whatsappGroupLink = "https://chat.whatsapp.com/JeKWQKQFZc5GbbPOE4oS9k";
 
-  // Function to open the enrollment modal
   const openEnrollmentModal = () => {
     setIsModalOpen(true);
   };
 
-  // Function to close the enrollment modal
   const closeEnrollmentModal = () => {
     setIsModalOpen(false);
   };
 
-  // Handle enrollment
   const handleEnroll = () => {
-    // Add your enrollment logic here, like sending data to a server
     console.log(`Enrolling ${enrollmentData.name} with phone number ${enrollmentData.phone}`);
-    // Close the modal after enrollment
     closeEnrollmentModal();
   };
 
-  // Handle input changes in the enrollment form
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEnrollmentData({ ...enrollmentData, [name]: value });
   };
 
-  // Function to open the modal automatically if the URL contains "/getfreetrial"
   const openModalIfNeeded = () => {
-    if (window.location.pathname === '/getfreetrial') {
+    if (typeof window !== 'undefined' && window.location.pathname === '/getfreetrial') {
       openEnrollmentModal();
     }
   };
 
-  // Call the function when the component mounts
   useEffect(() => {
     openModalIfNeeded();
   }, []);
 
   return (
-    <div className="container mx-auto ">
+    <div className="container mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-center py-10">
         <div className="flex flex-col gap-4">
           <p className="text-7xl capitalize font-semibold">
@@ -62,7 +54,6 @@ const Hero = () => {
             support your ongoing knowledge enrichment.
           </p>
           <div className="flex gap-4">
-            {/* Open Enrollment Modal button */}
             <button
               onClick={openEnrollmentModal}
               className="btn bg-purple-500 border-none capitalize btn-lg"
@@ -92,7 +83,6 @@ const Hero = () => {
         <img src="/assets/hero.png" alt="" />
       </div>
       
-      {/* Enrollment Modal */}
       {isModalOpen && (
         <EnrollmentModal
           onClose={closeEnrollmentModal}
