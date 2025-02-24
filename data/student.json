@@ -1,0 +1,24 @@
+{
+    "1": {
+      "name": "Aniket Kumar Jha",
+      "email": "aniketkumarjha051@gmail.com",
+      "address": "Sanjay Colony, Sector 23, Faridabad, Haryana", 
+      "dob": "29-12-2004",
+      "courses": ["Basics of Computing"],
+      "image": "/student/1.jpg",
+      "marksheet": "/student/marksheet-1.jpg",
+      "syllabus": [
+        "Operating System",
+        "Computer Fundamentals",
+        "MS Word",
+        "MS Excel",
+        "MS PowerPoint",
+        "Artificial Intelligence",
+        "Google Sheets",
+        "Google Forms",
+        "Canva",
+        "Communication Skills"
+      ]
+    }
+  }
+  
