@@ -1,0 +1,85 @@
+[
+    {
+      "id": 1,
+      "email": "student1@example.com",
+      "password": "password1",
+      "courses": [
+        {
+          "courseId": 101,
+          "courseName": "HTML",
+          "path": "Introduction to HTML, CSS, and JavaScript."
+        },
+        {
+          "courseId": 102,
+          "courseName": "CSS",
+          "path": "Basics of data analysis and Python programming."
+        },
+        {
+          "courseId": 103,
+          "courseName": "JavaScript",
+          "notes": "Basics of data analysis and Python programming."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student2@example.com",
+      "password": "password2",
+      "courses": [
+        {
+          "courseId": 103,
+          "courseName": "Machine Learning",
+          "notes": "Overview of supervised and unsupervised learning."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student2@example.com",
+      "password": "password2",
+      "courses": [
+        {
+          "courseId": 103,
+          "courseName": "Machine Learning",
+          "notes": "Overview of supervised and unsupervised learning."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student2@example.com",
+      "password": "password2",
+      "courses": [
+        {
+          "courseId": 103,
+          "courseName": "Machine Learning",
+          "notes": "Overview of supervised and unsupervised learning."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student2@example.com",
+      "password": "password2",
+      "courses": [
+        {
+          "courseId": 103,
+          "courseName": "Machine Learning",
+          "notes": "Overview of supervised and unsupervised learning."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "student2@example.com",
+      "password": "password2",
+      "courses": [
+        {
+          "courseId": 103,
+          "courseName": "Machine Learning",
+          "notes": "Overview of supervised and unsupervised learning."
+        }
+      ]
+    }
+  ]
+  
