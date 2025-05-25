@@ -19,7 +19,7 @@ class PlacementPage extends React.Component {
         { id: 9, name: "BrowserStack", logoUrl: "https://www.browserstack.com/images/layout/browserstack-logo-600x315.png" },
         { id: 10, name: "Gojek", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Gojek_logo_2022.svg/2560px-Gojek_logo_2022.svg.png" },
         { id: 11, name: "Razorpay", logoUrl: "https://assets-global.website-files.com/5b928a5439bbd3a36c44e301/5bafe547c110e44f487f6a3a_image_preview.png" },
-        { id: 12, name: "Unacademy", logoUrl: "https://images.yourstory.com/cs/images/companies/c69bc5b91c9888b7bd09-1622548235763.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" },
+        { id: 12, name: "Unacademy", logoUrl: "https://images.yourstory.com/cs/images/companies/c69bc5b91c9888b7bd09-1622548235763.jpg?fm=auto&ar=1:1&mode=fill&fill-color=fff" },
         { id: 13, name: "Zerodha", logoUrl: "https://www.eklavvya.com/blog/wp-content/uploads/2022/03/Zerodha-Logo.png" },
         { id: 14, name: "Devfolio", logoUrl: "https://cdn.iconscout.com/icon/free/png-256/free-devfolio-1649779-1399882.png" },
         { id: 15, name: "Sahaj Software", logoUrl: "https://media.licdn.com/dms/image/C560BAQHg_l1h_XiBZA/company-logo_200_200/0/1634569247323/sahajsoftware_logo?e=2147483647&v=beta&t=1Ii9jD_KiJtr47Xf0RHza5wG7oQWHptx9poThSYJgAM" },
@@ -60,13 +60,13 @@ class PlacementPage extends React.Component {
       <>
         <Head>
           <title>Top Companies Hiring Our Students | MaxByte Placement Academy</title>
-          <meta 
-            name="description" 
-            content="Discover the top companies where our students have been placed. We partner with leading organizations to provide excellent career opportunities." 
+          <meta
+            name="description"
+            content="Discover the top companies where our students have been placed. We partner with leading organizations to provide excellent career opportunities."
           />
-          <meta 
-            name="keywords" 
-            content="placement companies, hiring partners, tech jobs, career opportunities, MaxByte placements" 
+          <meta
+            name="keywords"
+            content="placement companies, hiring partners, tech jobs, career opportunities, MaxByte placements"
           />
         </Head>
 
@@ -84,8 +84,9 @@ class PlacementPage extends React.Component {
               </h1>
               <FaHandshake className="text-purple-600 text-3xl ml-3" />
             </div>
+            {/* FIX APPLIED HERE: Changed 'We're' to 'We&apos;re' */}
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              We're proud to collaborate with industry leaders who recognize the talent we nurture
+              We&apos;re proud to collaborate with industry leaders who recognize the talent we nurture
             </p>
           </motion.section>
 
@@ -105,9 +106,10 @@ class PlacementPage extends React.Component {
               >
                 <div className="p-4 flex flex-col items-center h-full">
                   <div className="relative w-full h-32 flex items-center justify-center">
-                    <img 
-                      src={placement.logoUrl} 
-                      alt={`${placement.name} logo`}
+                    <img
+                      src={placement.logoUrl}
+                      // Best practice for alt text: escape any potential apostrophes in company names
+                      alt={`${placement.name.replace(/'/g, '&apos;')} logo`}
                       className={`h-20 w-auto object-contain transition-opacity duration-300 ${loadedImages.includes(placement.id) ? 'opacity-100' : 'opacity-0'}`}
                       onLoad={() => this.handleImageLoad(placement.id)}
                       loading={placement.id <= 6 ? "eager" : "lazy"}
@@ -124,7 +126,7 @@ class PlacementPage extends React.Component {
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
