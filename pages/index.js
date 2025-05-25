@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script'; // Import the Script component
 import NavBar from '../components/NavBar';
 import Placed from '../components/Placed';
 import Footer from '../components/Footer';
@@ -24,19 +25,6 @@ export default function Home() {
         />
         <link rel="canonical" href="https://www.maxbyteplacementacademy.in" />
         <link rel="icon" type="image/png" href="/favicon.png" /> {/* Ensure this favicon exists */}
-
-        {/* Google Analytics Global Site Tag */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WCM4HJ7JL8"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-WCM4HJ7JL8');
-            `,
-          }}
-        />
 
         {/* Open Graph Meta Tags (for social media sharing) */}
         <meta property="og:title" content="MaxByte Placement Academy | Top IT, Accounts & Digital Marketing Institute in Faridabad" />
@@ -130,7 +118,6 @@ export default function Home() {
                           "name": "Java Development"
                         }
                       }
-                      // Add more specific IT course offerings here
                     ]
                   },
                   {
@@ -220,6 +207,25 @@ export default function Home() {
           }}
         />
       </Head>
+
+      {/* Google Analytics Global Site Tag using next/script */}
+      <Script
+        strategy="afterInteractive" // Loads after hydration, good balance for performance
+        src="https://www.googletagmanager.com/gtag/js?id=G-WCM4HJ7JL8"
+      />
+      <Script
+        id="google-analytics-init" // Unique ID for the inline script
+        strategy="afterInteractive" // Loads after hydration
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WCM4HJ7JL8');
+          `,
+        }}
+      />
+
       <NavBar />
       <Hero />
       <PlacementPage />
