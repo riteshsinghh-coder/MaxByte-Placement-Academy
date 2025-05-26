@@ -60,13 +60,13 @@ export default function Home() {
               "sameAs": [
                 "https://www.instagram.com/maxbyteplacementacademy",
                 "https://www.facebook.com/profile.php?id=61558540708282",
-                "https://www.youtube.com/YOUR_YOUTUBE_CHANNEL_URL" // **ACTION REQUIRED: REPLACE WITH YOUR ACTUAL YOUTUBE URL**
+                 "https://www.youtube.com/channel/UCUOszJIYskBMjPTmYxr-f1A"
               ],
               "contactPoint": [
                 {
                   "@type": "ContactPoint",
                   "contactType": "enrollment",
-                  "email": "maxbyteplacement@gmail.com",
+                  "email": "maxbyteplacementacademy@gmail.com",
                   "telephone": "+917545840365",
                   "description": "Enrollment and general inquiries for MaxByte Placement Academy",
                   "areaServed": "Faridabad",

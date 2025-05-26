@@ -6,7 +6,7 @@ import Head from 'next/head';
 
 const Footer = () => {
   // Current year for copyright
-  const currentYear = new Date().getFullYear();
+  const currentYear = 2024
 
   // Social media URLs
   const socialLinks = [
