@@ -29,20 +29,12 @@ export default function Home() {
         {/* Open Graph Meta Tags (for social media sharing) */}
         <meta property="og:title" content="MaxByte Placement Academy | Top IT, Accounts & Digital Marketing Institute in Faridabad" />
         <meta property="og:description" content="Unlock your potential with MaxByte Placement Academy! Offering the best IT, Accounts & Tally, and Digital Marketing courses with guaranteed job placement support for a thriving career in Faridabad." />
-        <meta property="og:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" /> {/* Use a high-quality OG image */}
+        <meta property="og:image" content="https://www.maxbyteplacementacademy.in/assets/logo.png" />
         <meta property="og:image:width" content="1200" /> {/* Recommended width for OG images */}
         <meta property="og:image:height" content="630" /> {/* Recommended height for OG images */}
         <meta property="og:url" content="https://www.maxbyteplacementacademy.in" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="MaxByte Placement Academy" />
-
-        {/* Twitter Card Meta Tags (for Twitter specific sharing) */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@MaxByteAcademy" /> {/* Replace with your actual Twitter handle if you have one */}
-        <meta name="twitter:creator" content="@MaxByteAcademy" /> {/* Replace with your actual Twitter handle if you have one */}
-        <meta name="twitter:title" content="MaxByte Placement Academy: Best IT, Accounts & Digital Marketing Training & Jobs in Faridabad" />
-        <meta name="twitter:description" content="Get hands-on training in IT, Accounts & Tally, and Digital Marketing, and secure your dream job with the best placement academy in Faridabad. Join MaxByte today!" />
-        <meta name="twitter:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" /> {/* Use the same OG image or a Twitter-specific one */}
 
         {/* Schema.org Structured Data (JSON-LD) for Educational Organization */}
         <script
@@ -68,7 +60,7 @@ export default function Home() {
               "sameAs": [
                 "https://www.instagram.com/maxbyteplacementacademy",
                 "https://www.facebook.com/profile.php?id=61558540708282",
-                "https://www.youtube.com/channel/UCUOszJIYskBMjPTmYxr-f1A" // **ACTION REQUIRED: PLEASE VERIFY THIS YOUTUBE URL**
+                "https://www.youtube.com/YOUR_YOUTUBE_CHANNEL_URL" // **ACTION REQUIRED: REPLACE WITH YOUR ACTUAL YOUTUBE URL**
               ],
               "contactPoint": [
                 {
@@ -82,6 +74,7 @@ export default function Home() {
                 },
                 {
                   "@type": "ContactPoint",
+                  "@id": "https://app.maxbyteplacementacademy.in", // Student portal URL
                   "contactType": "customer service",
                   "url": "https://wa.me/7545840365",
                   "description": "WhatsApp contact for quick support and inquiries",
@@ -101,7 +94,8 @@ export default function Home() {
                         "@type": "Offer",
                         "itemOffered": {
                           "@type": "Course",
-                          "name": "Full Stack Web Development"
+                          "name": "Full Stack Web Development",
+                          "url": "https://maxbyteplacementacademy.in/course/3" // Web Development Course URL
                         }
                       },
                       {
@@ -128,7 +122,8 @@ export default function Home() {
                         "@type": "Offer",
                         "itemOffered": {
                           "@type": "Course",
-                          "name": "Accounts & Tally ERP 9 Training"
+                          "name": "Accounts & Tally ERP 9 Training",
+                          "url": "https://maxbyteplacementacademy.in/course/5" // Accounts and Tally Course URL
                         }
                       },
                       {
@@ -144,6 +139,14 @@ export default function Home() {
                           "@type": "Course",
                           "name": "GST & Taxation Course"
                         }
+                      },
+                      {
+                        "@type": "Offer",
+                        "itemOffered": {
+                          "@type": "Course",
+                          "name": "Basic Computer Course",
+                          "url": "https://maxbyteplacementacademy.in/course/1" // Basic Computer Course URL
+                        }
                       }
                     ]
                   },
@@ -155,7 +158,8 @@ export default function Home() {
                         "@type": "Offer",
                         "itemOffered": {
                           "@type": "Course",
-                          "name": "Certified Digital Marketing Professional"
+                          "name": "Certified Digital Marketing Professional",
+                          "url": "https://maxbyteplacementacademy.in/course/4" // Digital Marketing Course URL
                         }
                       },
                       {
@@ -202,7 +206,14 @@ export default function Home() {
                     ]
                   }
                 ]
-              }
+              },
+              "hasPart": [ // Adding student portal as a part of the main website
+                {
+                  "@type": "WebSite",
+                  "name": "MaxByte Student Portal",
+                  "url": "https://app.maxbyteplacementacademy.in"
+                }
+              ]
             }),
           }}
         />
