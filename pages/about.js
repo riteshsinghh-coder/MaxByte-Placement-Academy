@@ -1,46 +1,47 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import NavBar from '../components/NavBar';
-import { motion } from 'framer-motion'; // Import motion from framer-motion
+import { motion } from 'framer-motion';
 
 const AboutPage = () => {
-  // WhatsApp group link
   const whatsappGroupLink = 'https://chat.whatsapp.com/JeKWQKQFZc5GbbPOE4oS9k';
 
-  // Animation variants for sections
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 15,
-        duration: 0.8
-      }
+      transition: { type: 'spring', stiffness: 100, damping: 15, duration: 0.8 }
     }
   };
 
-  // Animation variants for individual items/cards
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 12,
-        duration: 0.6
-      }
+      transition: { type: 'spring', stiffness: 100, damping: 12, duration: 0.6 }
     }
   };
 
   return (
     <>
+      <Helmet>
+        <title>About Us - MaxByte Placement Academy</title>
+        <meta name="description" content="Learn about MaxByte Placement Academy — your trusted partner for IT education, placement, and career success. Join us to transform your future." />
+        <meta name="keywords" content="MaxByte, IT Training, Placement, Tech Academy, Web Development, Career Growth, Learn Programming, India IT Academy" />
+        <meta name="author" content="MaxByte Placement Academy" />
+        <meta property="og:title" content="About MaxByte Placement Academy" />
+        <meta property="og:description" content="Discover how MaxByte empowers students and professionals in tech. Learn about our mission, vision, and dedication to nation-building." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.maxbyteplacementacademy.in/about" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.maxbyteplacementacademy.in/about" />
+      </Helmet>
+
       <NavBar />
-      {/* Main content container - Add pt-16 to push content below the Navbar */}
-      <div className="pt-16 bg-[#0a0a0a] text-gray-100 min-h-screen"> 
+
+      <main className="pt-16 bg-[#0a0a0a] text-gray-100 min-h-screen">
         {/* Hero Section */}
         <motion.section
           className="relative py-20 px-4 text-center bg-gradient-to-r from-purple-800 to-indigo-900 overflow-hidden"
@@ -51,9 +52,8 @@ const AboutPage = () => {
             visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
           }}
         >
-          {/* Background pattern/overlay for visual interest */}
           <div className="absolute inset-0 bg-pattern-light opacity-10"></div>
-          
+
           <div className="relative z-10 container mx-auto max-w-4xl">
             <motion.h1 
               className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white drop-shadow-lg"
@@ -85,7 +85,7 @@ const AboutPage = () => {
           </div>
         </motion.section>
 
-        {/* About Us Section */}
+        {/* About Section */}
         <motion.section
           className="container mx-auto px-4 py-16 max-w-4xl"
           initial="hidden"
@@ -113,12 +113,12 @@ const AboutPage = () => {
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold mb-6 text-purple-500">Our Mission</h2>
             <p className="text-lg leading-relaxed text-gray-300">
-              At MaxByte, our mission is to empower students and professionals with industry-relevant skills and experiences that enable them to excel in their careers. We strive to create a dynamic learning environment where innovation, collaboration, and excellence are fostered. We aim to produce highly competent and confident individuals ready to make significant contributions to the global tech landscape.
+              At MaxByte, our mission is to empower students and professionals with industry-relevant skills and experiences that enable them to excel in their careers. We aim to produce highly competent individuals ready to make significant contributions to the global tech landscape.
             </p>
           </div>
         </motion.section>
 
-        {/* Why Join Us / Vision / Serving Our Country - Grid Layout */}
+        {/* Vision, Join Us, Serving the Nation Section */}
         <motion.section
           className="container mx-auto px-4 py-16 max-w-6xl"
           initial="hidden"
@@ -128,33 +128,31 @@ const AboutPage = () => {
         >
           <h2 className="text-3xl font-bold mb-12 text-purple-500 text-center">Why MaxByte?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Why Join Us Card */}
+            {/* Join Us */}
             <motion.div variants={itemVariants} className="bg-[#1a1a2a] rounded-lg p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-purple-700">
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Why Join Us?</h3>
               <p className="text-gray-300 leading-relaxed">
-                Join MaxByte Placement Academy and embark on a journey of growth and opportunity. With our expert faculty, comprehensive courses, and dedicated placement assistance, we provide the resources and support you need to achieve your career goals in the rapidly evolving field of technology. Our hands-on approach ensures you gain practical, sought-after skills.
+                With our expert faculty, comprehensive courses, and dedicated placement assistance, MaxByte provides the support you need to achieve your tech career goals.
               </p>
             </motion.div>
-
-            {/* Our Vision Card */}
+            {/* Vision */}
             <motion.div variants={itemVariants} className="bg-[#1a1a2a] rounded-lg p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-purple-700">
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Our Vision</h3>
               <p className="text-gray-300 leading-relaxed">
-                Our vision is to be the premier destination for IT education and career placement, recognized for our commitment to excellence, innovation, and student success. We aspire to empower individuals with the skills and confidence to thrive in the digital age and make meaningful contributions to society, shaping the future of technology.
+                To be the premier IT education and career hub known for excellence, innovation, and student empowerment in the digital era.
               </p>
             </motion.div>
-
-            {/* Serving Our Country Card */}
+            {/* Nation */}
             <motion.div variants={itemVariants} className="bg-[#1a1a2a] rounded-lg p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-purple-700">
               <h3 className="text-2xl font-bold mb-4 text-purple-400">Serving Our Nation</h3>
               <p className="text-gray-300 leading-relaxed">
-                At MaxByte, we are proud to serve our country by equipping our students with the knowledge and skills needed to contribute to the growth and development of our nation&apos;s technology sector. Through high-quality education and unparalleled opportunities, we aim to empower the next generation of tech leaders and innovators, driving national progress.
+                We equip students to contribute to national progress through quality IT education and professional skill-building.
               </p>
             </motion.div>
           </div>
         </motion.section>
 
-        {/* Call to Action at the bottom */}
+        {/* CTA */}
         <motion.section
           className="bg-gradient-to-r from-indigo-900 to-purple-800 py-12 px-4 text-center mt-12"
           initial="hidden"
@@ -165,7 +163,7 @@ const AboutPage = () => {
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold mb-4 text-white">Ready to Transform Your Career?</h2>
             <p className="text-lg text-purple-200 mb-8">
-              Join MaxByte Placement Academy today and take the first step towards a rewarding future in the IT industry.
+              Join MaxByte Placement Academy today and take the first step toward a successful IT career.
             </p>
             <motion.a 
               href={whatsappGroupLink} 
@@ -179,7 +177,7 @@ const AboutPage = () => {
             </motion.a>
           </div>
         </motion.section>
-      </div>
+      </main>
     </>
   );
 };

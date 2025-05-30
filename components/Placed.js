@@ -61,7 +61,7 @@ const Placed = () => {
   return (
     <>
       <Head>
-        <title>Our Placed Students | MaxByte Placement Academy</title>
+        <title>Our Placed Students | MaxByte Placement Academy | Best Computer Center </title>
         <meta 
           name="description" 
           content="See our successfully placed students and their achievements at MaxByte Placement Academy" 
