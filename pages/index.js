@@ -28,14 +28,17 @@ export default function Home() {
         <link rel="canonical" href="https://maxbyteplacementacademy.in" />
 
         {/* Favicons */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#ffffff" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-config" content="/browserconfig.xml" />
+\
+<link rel="apple-touch-icon" sizes="180x180" href="https://maxbyteplacementacademy.in/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://maxbyteplacementacademy.in/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://maxbyteplacementacademy.in/favicon-16x16.png" />
+<link rel="manifest" href="https://maxbyteplacementacademy.in/site.webmanifest" />
+<link rel="shortcut icon" href="https://maxbyteplacementacademy.in/favicon.ico" />
+
+<meta name="theme-color" content="#ffffff" />
+<meta name="msapplication-TileColor" content="#ffffff" />
+<meta name="msapplication-config" content="https://maxbyteplacementacademy.in/browserconfig.xml" />
+
 
         {/* Open Graph (Facebook & LinkedIn) */}
         <meta property="og:title" content="MaxByte Placement Academy | Best Computer Institute in Faridabad" />
