@@ -173,40 +173,101 @@ const NavBar = () => {
   return (
     <>
       <Head>
-        <title>MaxByte Placement Academy | IT Education & Career Placement</title>
-        <meta 
-          name="description" 
-          content="MaxByte Placement Academy offers comprehensive IT education and career placement services. Join our courses in Web Development, Cloud Computing, AI/ML and more." 
-        />
-        <meta 
-          name="keywords" 
-          content="IT education, career placement, web development, cloud computing, machine learning, programming courses, student portal"
-        />
-        <meta property="og:title" content="MaxByte Placement Academy" />
-        <meta property="og:description" content="Comprehensive IT education and career placement services" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://maxbyteplacementacademy.in" />
-        <meta property="og:image" content="/assets/logo.png" />
-        <link rel="canonical" href="https://maxbyteplacementacademy.in" />
-        <link rel="preload" href="/assets/logo.png" as="image" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "MaxByte Placement Academy",
-            "url": "https://maxbyteplacementacademy.in",
-            "logo": "https://maxbyteplacementacademy.in/assets/logo.png",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+917545840365",
-              "contactType": "customer service",
-              "email": "maxbyteplacementacademy@gmail.com",
-              "areaServed": "India"
-            }
-          })}
-        </script>
-      </Head>
-      
+  <title>MaxByte Placement Academy | IT Education, Coaching & Digital Marketing in Faridabad</title>
+  <meta
+    name="description"
+    content="MaxByte Placement Academy offers top-notch IT education, school tuition (5th–10th), and digital marketing training in Faridabad. Join our Coaching Institute or Digital Hub to level up your future."
+  />
+  <meta
+    name="keywords"
+    content="IT education Faridabad, coaching institute 5th to 10th, tuition classes in Faridabad, digital marketing training, SEO courses, social media marketing Faridabad, best coaching Faridabad, MaxByte"
+  />
+  <meta name="author" content="MaxByte Placement Academy" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="MaxByte Placement Academy - Coaching & Digital Training in Faridabad" />
+  <meta property="og:description" content="Coaching for classes 5–10 and digital marketing training. Trusted by hundreds in Faridabad." />
+  <meta property="og:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
+  <meta property="og:url" content="https://maxbyteplacementacademy.in" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MaxByte Placement Academy - Coaching & Digital Training" />
+  <meta name="twitter:description" content="Join our school coaching and digital hub in Faridabad. Practical education for students and professionals." />
+  <meta name="twitter:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
+
+  <link rel="canonical" href="https://maxbyteplacementacademy.in" />
+  <link rel="preload" href="/assets/logo.png" as="image" />
+
+  {/* Schema.org - Main Academy */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "MaxByte Placement Academy",
+      "url": "https://maxbyteplacementacademy.in",
+      "logo": "https://maxbyteplacementacademy.in/assets/logo.png",
+      "description": "IT education, student coaching (5th–10th), and digital marketing training in Faridabad.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917545840365",
+        "contactType": "Customer Service",
+        "email": "maxbyteplacementacademy@gmail.com",
+        "areaServed": "India"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Faridabad",
+        "addressRegion": "Haryana",
+        "addressCountry": "India"
+      }
+    })}
+  </script>
+
+  {/* Schema - MaxByte Coaching Institute */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "MaxByte Coaching Institute",
+      "url": "https://maxbytecoachinginstitute.maxbyteplacementacademy.in",
+      "description": "Best coaching institute for classes 5 to 10 in Faridabad with expert faculty and proven results.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Faridabad",
+        "addressRegion": "Haryana",
+        "addressCountry": "India"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917545840365",
+        "contactType": "Customer Service"
+      }
+    })}
+  </script>
+
+  {/* Schema - MaxByte Digital Hub */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MaxByte Digital Hub",
+      "url": "https://maxbyteplacementacademy.in",
+      "description": "Faridabad’s leading digital marketing training institute offering SEO, Google Ads, social media, and freelancing skills.",
+      "sameAs": [
+        "https://www.facebook.com/maxbyteplacementacademy",
+        "https://www.instagram.com/maxbyteplacementacademy"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+917545840365",
+        "contactType": "Customer Service"
+      }
+    })}
+  </script>
+</Head>
+
       <header className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-1' : 'bg-white/95 py-2'}`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
