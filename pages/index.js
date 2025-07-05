@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="canonical" href="https://maxbyteplacementacademy.in" />
 
         {/* Favicons */}
-\
+
 <link rel="apple-touch-icon" sizes="180x180" href="https://maxbyteplacementacademy.in/apple-touch-icon.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="https://maxbyteplacementacademy.in/favicon-32x32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="https://maxbyteplacementacademy.in/favicon-16x16.png" />

@@ -233,6 +233,18 @@ const NavBar = () => {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </Link>
+              <Link href="https://maxbytecoachinginstitute.maxbyteplacementacademy.in/" passHref legacyBehavior>
+                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+                  Maxbyte Coaching Intitute
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </Link>
+              <Link href="" passHref legacyBehavior>
+                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+                  Maxbyte Digital Hub
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+              </Link>
               
               <button 
                 onClick={() => openModal('Contact Us', 'Feel free to reach us via phone, WhatsApp, or email.')}
