@@ -181,8 +181,8 @@ export default function Home() {
               hasPart: [
                 {
                   "@type": "WebSite",
-                  name: "MaxByte Student Portal",
-                  url: "https://app.maxbyteplacementacademy.in",
+                  name: "MaxByte Coaching Institute",
+                  url: "https://maxbytecoachinginstitute.maxbyteplacementacademy.in",
                 },
               ],
             }),
