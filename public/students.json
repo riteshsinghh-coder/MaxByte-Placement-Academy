@@ -1,85 +1,453 @@
-[
+{
+  "students": [
     {
-      "id": 1,
-      "email": "student1@example.com",
-      "password": "password1",
-      "courses": [
-        {
-          "courseId": 101,
-          "courseName": "HTML",
-          "path": "Introduction to HTML, CSS, and JavaScript."
-        },
-        {
-          "courseId": 102,
-          "courseName": "CSS",
-          "path": "Basics of data analysis and Python programming."
-        },
-        {
-          "courseId": 103,
-          "courseName": "JavaScript",
-          "notes": "Basics of data analysis and Python programming."
-        }
-      ]
+      "uid": "BF016",
+      "name": "Priya kumari",
+      "fatherName": "Dinesh kumar",
+      "gender": "Female",
+      "mobile": "+91 8860716514",
+      "dob": "2009-09-29",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/rahul.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1001",
+      "verified": true,
+      "marks":"A+"
     },
     {
-      "id": 2,
-      "email": "student2@example.com",
-      "password": "password2",
-      "courses": [
-        {
-          "courseId": 103,
-          "courseName": "Machine Learning",
-          "notes": "Overview of supervised and unsupervised learning."
-        }
-      ]
+      "uid": "Py042",
+      "name": "Anurag",
+      "fatherName": "Ashok",
+      "gender": "Male",
+      "mobile": "+91 7607037651",
+      "dob": "2005-03-01",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1002",
+      "verified": true,
+      "marks": "A+"
+    },
+ {
+      "uid": "Py031",
+      "name": "Dhruv",
+      "fatherName": "Sita Ram",
+      "gender": "Male",
+      "mobile": "+91 7004048184",
+      "dob": "2005-05-08",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1003",
+      "verified": true,
+      "marks": "A+"
+    },
+     {
+      "uid": "BF002",
+      "name": "Shyam",
+      "fatherName": "Sanjeev Upadhyay",
+      "gender": "Male",
+      "mobile": "+91 7703840961",
+      "dob": "2005-03-03",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1004",
+      "verified": true,
+      "marks": "A+"
+    },
+     {
+      "uid": "BF006",
+      "name": "Anika",
+      "fatherName": "Brijnandan Parsad",
+      "gender": "Female",
+      "mobile": "+91 9873490143",
+      "dob": "2008-01-02",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1005",
+      "verified": true,
+      "marks": "A+"
+    },
+     {
+      "uid": "BF007",
+      "name": "Bhumi",
+      "fatherName": "Vishnu Pathak",
+      "gender": "Female",
+      "mobile": "+91 9711729578",
+      "dob": "2010-03-22",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1006",
+      "verified": true,
+      "marks": "A+"
+    },
+     {
+      "uid": "BF004",
+      "name": "Preeti",
+      "fatherName": "Sunil Kumar",
+      "gender": "Female",
+      "mobile": "+91 8586807485",
+      "dob": "2007-12-24",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1007",
+      "verified": true,
+      "marks": "A+"
+    },
+     {
+      "uid": "BF014",
+      "name": "Saloni Kumari",
+      "fatherName": "Vicky Shah",
+      "gender": "Female",
+      "mobile": "+91 9560177515",
+      "dob": "2011-03-18",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1008",
+      "verified": true,
+      "marks": "A+"
     },
     {
-      "id": 2,
-      "email": "student2@example.com",
-      "password": "password2",
-      "courses": [
-        {
-          "courseId": 103,
-          "courseName": "Machine Learning",
-          "notes": "Overview of supervised and unsupervised learning."
-        }
-      ]
+      "uid": "Py045",
+      "name": "Bhavya",
+      "fatherName": "Moha Kumar Jha",
+      "gender": "Female",
+      "mobile": "+91 9625301650 ",
+      "dob": "2007-06-01",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1009",
+      "verified": true,
+      "marks": "A+"
+    },
+ {
+      "uid": "BF001",
+      "name": "Priya kumari",
+      "fatherName": "Shailesh Shah",
+      "gender": "Female",
+      "mobile": "+91 9555609363",
+      "dob": "2010-12-28",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1010",
+      "verified": true,
+      "marks": "A+"
     },
     {
-      "id": 2,
-      "email": "student2@example.com",
-      "password": "password2",
-      "courses": [
-        {
-          "courseId": 103,
-          "courseName": "Machine Learning",
-          "notes": "Overview of supervised and unsupervised learning."
-        }
-      ]
+      "uid": "Py023",
+      "name": "Dhruv Kiran",
+      "fatherName": "Vishnu kiran",
+      "gender": "Male",
+      "mobile": "+91 8506949166",
+      "dob": "2011-03-18",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1011",
+      "verified": true,
+      "marks": "A+"
     },
     {
-      "id": 2,
-      "email": "student2@example.com",
-      "password": "password2",
-      "courses": [
-        {
-          "courseId": 103,
-          "courseName": "Machine Learning",
-          "notes": "Overview of supervised and unsupervised learning."
-        }
-      ]
+      "uid": "Py044",
+      "name": "Shallu kohli",
+      "fatherName": "Harsh Vardhan Kohli",
+      "gender": "Male",
+      "mobile": "+91 7302545931",
+      "dob": "2011-03-18",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1012",
+      "verified": true,
+      "marks": "A+"
     },
     {
-      "id": 2,
-      "email": "student2@example.com",
-      "password": "password2",
-      "courses": [
-        {
-          "courseId": 103,
-          "courseName": "Machine Learning",
-          "notes": "Overview of supervised and unsupervised learning."
-        }
-      ]
+      "uid": "Pyo15",
+      "name": "Kunal Singh",
+      "fatherName": "Ajay Kumar Singh",
+      "gender": "Male",
+      "mobile": "+91 9205836684",
+      "dob": "2011-03-18",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1013",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "Py018",
+      "name": "Tejus Kumar",
+      "fatherName": "Naresh Kumar",
+      "gender": "Male",
+      "mobile": "+91 8810556409",
+      "dob": "2011-03-18",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1014",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF043",
+      "name": "Bhawna",
+      "fatherName": "Vishnu Dutt",
+      "gender": "Female",
+      "mobile": "+91 8860643416",
+      "dob": "2007-09-09",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1015",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF041",
+      "name": "Sakshi Sharma",
+      "fatherName": "Deshraj Sharma",
+      "gender": "Female",
+      "mobile": "+91 9069158632",
+      "dob": "2009-01-30",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1016",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF017",
+      "name": "Himanshi",
+      "fatherName": "Lakhmi Singh",
+      "gender": "Female",
+      "mobile": "+91 9711370758 ",
+      "dob": "2009-03-28",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1017",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF029",
+      "name": "Mahi",
+      "fatherName": "Pawan Kumar",
+      "gender": "Female",
+      "mobile": "+91 8750654779",
+      "dob": "2007-07-18",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1018",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF040",
+      "name": "Mukesh Kumar",
+      "fatherName": "Kishor Kumar Das",
+      "gender": "Male",
+      "mobile": "+91 9899903835",
+      "dob": "2009-02-02",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1019",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "Py038",
+      "name": "Shobhit Sharma",
+      "fatherName": "Rajender Sharma",
+      "gender": "Male",
+      "mobile": "+91 8920266871",
+      "dob": "2007-07-23",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1020",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF035",
+      "name": "Sahil Kumar",
+      "fatherName": "Raju Singh",
+      "gender": "Male",
+      "mobile": "+91 9540464061",
+      "dob": "2007-07-23",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1021",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF048",
+      "name": "Divyanshu",
+      "fatherName": "Vijay Kumar",
+      "gender": "Female",
+      "mobile": "+91 9654390869",
+      "dob": "2009-01-20",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1022",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF008",
+      "name": "Bhumi",
+      "fatherName": "Sushil Kumar",
+      "gender": "Female",
+      "mobile": "+91 8588996670",
+      "dob": "2010-11-21",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1023",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "Py009",
+      "name": "Sachin ",
+      "fatherName": "Surender Singh",
+      "gender": "Male",
+      "mobile": "+91 8585935586",
+      "dob": "2006-12-03",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1024",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF011",
+      "name": "Ritu",
+      "fatherName": "Krishan Dutt Sharma",
+      "gender": "Female",
+      "mobile": "+91 9625295839",
+      "dob": "2004-07-15",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1025",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF012",
+      "name": "Chanchal Sharma",
+      "fatherName": "Krishan Dutt Sharma",
+      "gender": "Female",
+      "mobile": "+91 9625295839",
+      "dob": "2008-10-09",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1026",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF019",
+      "name": "Sneha",
+      "fatherName": "Anand Pratap Yadav",
+      "gender": "Female",
+      "mobile": "+91 8882707937",
+      "dob": "2008-04-01",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1027",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF020",
+      "name": "Nancy",
+      "fatherName": "Anand Pratap Yadav",
+      "gender": "Female",
+      "mobile": "+91 8882707937",
+      "dob": "2008-04-01",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1028",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF021",
+      "name": "Jatin Kumar",
+      "fatherName": "Sarwan Kumar",
+      "gender": "Male",
+      "mobile": "+91 85859557825",
+      "dob": "2010-03-13",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1029",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF022",
+      "name": "Nemi Bairwa",
+      "fatherName": "Jagmohan Bairwa",
+      "gender": "Male",
+      "mobile": "+91 8875805076",
+      "dob": "1997-07-17",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1030",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "BF028",
+      "name": "Anish kumar",
+      "fatherName": "Chhannulal",
+      "gender": "Male",
+      "mobile": "+91 8948117290",
+      "dob": "2007-01-01",
+      "course": "Basic computer+AI",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1031",
+      "verified": true,
+      "marks": "A+"
+    },
+    {
+      "uid": "Py030",
+      "name": "Anurag",
+      "fatherName": "Shankar Tiwari",
+      "gender": "Male",
+      "mobile": "+91 7042129151",
+      "dob": "2006-01-22",
+      "course": "Python",
+      "photo": "/assets/students/priya.jpg",
+      "completionDate": "2025-08-10",
+      "certificateId": "1032",
+      "verified": true,
+      "marks": "A+"
     }
+
   ]
-  
+}
