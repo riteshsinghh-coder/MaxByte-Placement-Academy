@@ -1,4 +1,17 @@
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+
 export default function CertificateView({ student }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null; // or a loading skeleton
+  }
+
   return (
     <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden certificate-paper">
       {/* Certificate Header */}
@@ -10,11 +23,13 @@ export default function CertificateView({ student }) {
       {/* Student Photo and Basic Info */}
       <div className="flex flex-col md:flex-row p-6 border-b">
         <div className="w-full md:w-1/4 flex justify-center mb-4 md:mb-0">
-          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100">
-            <img 
-              src={student.photo} 
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-100 relative">
+            <Image
+              src={student.photo || '/assets/students/default.jpg'}
               alt={student.name}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
               onError={(e) => {
                 e.target.src = '/assets/students/default.jpg';
               }}
@@ -25,12 +40,12 @@ export default function CertificateView({ student }) {
           <h2 className="text-2xl font-bold text-blue-800">{student.name}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
             <div>
-              <p className="text-gray-600"><span className="font-semibold">Father's Name:</span> {student.fatherName}</p>
+              <p className="text-gray-600"><span className="font-semibold">Father&apos;s Name:</span> {student.fatherName}</p>
               <p className="text-gray-600"><span className="font-semibold">Gender:</span> {student.gender}</p>
               <p className="text-gray-600"><span className="font-semibold">Mobile:</span> {student.mobile}</p>
             </div>
             <div>
-              <p className="text-gray-600"><span className="font-semibold">Date of Birth:</span> {new Date(student.dob).toLocaleDateString()}</p>
+              <p className="text-gray-600"><span className="font-semibold">Date of Birth:</span> {student.dob ? new Date(student.dob).toLocaleDateString() : 'N/A'}</p>
               <p className="text-gray-600"><span className="font-semibold">Course:</span> {student.course}</p>
               <p className="text-gray-600"><span className="font-semibold">Address:</span> {student.address}</p>
             </div>
@@ -47,7 +62,7 @@ export default function CertificateView({ student }) {
             with a final grade of <span className="font-bold">{student.marks}%</span>
           </p>
           <p className="text-gray-600 mt-2">
-            on <span className="font-semibold">{new Date(student.completionDate).toLocaleDateString()}</span>
+            on <span className="font-semibold">{student.completionDate ? new Date(student.completionDate).toLocaleDateString() : 'N/A'}</span>
           </p>
         </div>
 
@@ -78,7 +93,7 @@ export default function CertificateView({ student }) {
       <div className="text-center text-sm text-gray-500 p-4 bg-gray-50">
         <p>This certificate can be verified by scanning the QR code or visiting:</p>
         <p className="mt-1 font-mono text-blue-600 break-all">
-          {typeof window !== 'undefined' && window.location.href}
+          {typeof window !== 'undefined' ? window.location.href : 'Loading...'}
         </p>
       </div>
     </div>

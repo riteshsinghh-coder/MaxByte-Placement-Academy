@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaHandshake } from 'react-icons/fa';
+import Image from "next/image";
 
 class PlacementPage extends React.Component {
   constructor(props) {
@@ -84,7 +85,6 @@ class PlacementPage extends React.Component {
               </h1>
               <FaHandshake className="text-purple-600 text-3xl ml-3" />
             </div>
-            {/* FIX APPLIED HERE: Changed 'We're' to 'We&apos;re' */}
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               We&apos;re proud to collaborate with industry leaders who recognize the talent we nurture
             </p>
@@ -105,15 +105,19 @@ class PlacementPage extends React.Component {
                 className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden"
               >
                 <div className="p-4 flex flex-col items-center h-full">
-                  <div className="relative w-full h-32 flex items-center justify-center">
-                    <img
-                      src={placement.logoUrl}
-                      // Best practice for alt text: escape any potential apostrophes in company names
-                      alt={`${placement.name.replace(/'/g, '&apos;')} logo`}
-                      className={`h-20 w-auto object-contain transition-opacity duration-300 ${loadedImages.includes(placement.id) ? 'opacity-100' : 'opacity-0'}`}
-                      onLoad={() => this.handleImageLoad(placement.id)}
-                      loading={placement.id <= 6 ? "eager" : "lazy"}
-                    />
+                  <div className="relative w-full h-32">
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={placement.logoUrl}
+                        alt={`${placement.name.replace(/'/g, '&apos;')} logo`}
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        sizes="(max-width: 640px) 100px, (max-width: 1024px) 150px, 200px"
+                        className={`transition-opacity duration-300 ${loadedImages.includes(placement.id) ? 'opacity-100' : 'opacity-0'}`}
+                        onLoadingComplete={() => this.handleImageLoad(placement.id)}
+                        priority={placement.id <= 6}
+                      />
+                    </div>
                     {!loadedImages.includes(placement.id) && (
                       <div className="absolute inset-0 bg-gray-100 animate-pulse rounded-lg"></div>
                     )}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import EnrollmentModal from './EnrollmentModal';
+import Image from "next/image";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -89,85 +90,69 @@ const Hero = () => {
   return (
     <>
       <Head>
-  <title>MaxByte Placement Academy | Best IT Institute & Placement in Faridabad</title>
-
-  {/* Standard SEO Meta Tags */}
-  <meta 
-    name="description" 
-    content="MaxByte Placement Academy: Your leading IT institute in Faridabad for comprehensive training, guaranteed placements, and career success. Master in-demand skills with expert-led courses." 
-  />
-  <meta 
-    name="keywords" 
-    content="MaxByte Placement Academy, best institute in Faridabad, best placement academy in Faridabad, IT courses Faridabad, software training Faridabad, career advancement, skill development, job placement, professional training, online learning, coding bootcamps" 
-  />
-  <link rel="canonical" href="https://www.maxbyteplacementacademy.in" />
-
-  {/* Open Graph Meta Tags (for social media sharing previews) */}
-  <meta property="og:title" content="MaxByte Placement Academy | Best IT Training & Placement in Faridabad" />
-  <meta property="og:description" content="Unlock your potential with MaxByte Placement Academy! Offering top-tier IT courses and exceptional job placement support for a thriving tech career in Faridabad." />
-  {/* Ensure this image path is correct and exists for your website's social sharing image */}
-  <meta property="og:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" /> 
-  <meta property="og:url" content="https://www.maxbyteplacementacademy.in" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="MaxByte Placement Academy" />
-
-  {/* Twitter Card Meta Tags (for Twitter specific sharing previews) */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@MaxByteAcademy" /> {/* Placeholder - if you don't have one, consider creating or remove this line */}
-  <meta name="twitter:creator" content="@MaxByteAcademy" /> {/* Placeholder - if you don't have one, consider creating or remove this line */}
-  <meta name="twitter:title" content="MaxByte Placement Academy: IT Careers in Faridabad" />
-  <meta name="twitter:description" content="Get hands-on IT training and secure your dream job with the best placement academy in Faridabad. Join MaxByte today!" />
-  <meta name="twitter:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" /> {/* Use the same OG image or a Twitter-specific one */}
-
-  {/* Schema.org Structured Data (JSON-LD) for Educational Organization */}
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "MaxByte Placement Academy",
-      "url": "https://www.maxbyteplacementacademy.in",
-      "logo": "https://www.maxbyteplacementacademy.in/assets/logo.png", 
-      "description": "MaxByte Placement Academy is a leading IT training and placement institute located in Faridabad, Haryana, India. We offer comprehensive courses and guaranteed job assistance to empower students for successful careers in the technology sector.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "AP School Gali, Sector 23",
-        "addressLocality": "Faridabad",
-        "addressRegion": "Haryana",
-        "postalCode": "121005",
-        "addressCountry": "IN"
-      },
-      "telephone": "+917545840365",
-      "email": "maxbyteplacement@gmail.com",
-      "sameAs": [
-        "https://www.instagram.com/maxbyteplacementacademy",
-        "https://www.facebook.com/profile.php?id=61558540708282",
-        "https://www.youtube.com/channel/UCUOszJIYskBMjPTmYxr-f1A" // REMINDER: Verify and update this YouTube URL
-      ],
-      "contactPoint": [ // Changed to array to include multiple contact points
-        {
-          "@type": "ContactPoint",
-          "contactType": "enrollment",
-          "email": "maxbyteplacement@gmail.com",
-          "telephone": "+917545840365",
-          "description": "Enrollment and general inquiries"
-        },
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer service",
-          "url": "https://wa.me/7545840365", // Added WhatsApp as a contact point
-          "description": "WhatsApp contact for quick support"
-        }
-        // If you have a specific Google Form for enrollment, add it here:
-        // {
-        //   "@type": "ContactPoint",
-        //   "contactType": "enrollment",
-        //   "url": "YOUR_ACTUAL_GOOGLE_FORM_URL_HERE", 
-        //   "description": "Online enrollment form"
-        // }
-      ]
-    })}
-  </script>
-</Head>
+        <title>MaxByte Placement Academy | Best IT Institute & Placement in Faridabad</title>
+        <meta 
+          name="description" 
+          content="MaxByte Placement Academy: Your leading IT institute in Faridabad for comprehensive training, guaranteed placements, and career success. Master in-demand skills with expert-led courses." 
+        />
+        <meta 
+          name="keywords" 
+          content="MaxByte Placement Academy, best institute in Faridabad, best placement academy in Faridabad, IT courses Faridabad, software training Faridabad, career advancement, skill development, job placement, professional training, online learning, coding bootcamps" 
+        />
+        <link rel="canonical" href="https://www.maxbyteplacementacademy.in" />
+        <meta property="og:title" content="MaxByte Placement Academy | Best IT Training & Placement in Faridabad" />
+        <meta property="og:description" content="Unlock your potential with MaxByte Placement Academy! Offering top-tier IT courses and exceptional job placement support for a thriving tech career in Faridabad." />
+        <meta property="og:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" /> 
+        <meta property="og:url" content="https://www.maxbyteplacementacademy.in" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="MaxByte Placement Academy" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@MaxByteAcademy" />
+        <meta name="twitter:creator" content="@MaxByteAcademy" />
+        <meta name="twitter:title" content="MaxByte Placement Academy: IT Careers in Faridabad" />
+        <meta name="twitter:description" content="Get hands-on IT training and secure your dream job with the best placement academy in Faridabad. Join MaxByte today!" />
+        <meta name="twitter:image" content="https://www.maxbyteplacementacademy.in/assets/maxbyte_og_image.png" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "MaxByte Placement Academy",
+            "url": "https://www.maxbyteplacementacademy.in",
+            "logo": "https://www.maxbyteplacementacademy.in/assets/logo.png", 
+            "description": "MaxByte Placement Academy is a leading IT training and placement institute located in Faridabad, Haryana, India.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "AP School Gali, Sector 23",
+              "addressLocality": "Faridabad",
+              "addressRegion": "Haryana",
+              "postalCode": "121005",
+              "addressCountry": "IN"
+            },
+            "telephone": "+917545840365",
+            "email": "maxbyteplacement@gmail.com",
+            "sameAs": [
+              "https://www.instagram.com/maxbyteplacementacademy",
+              "https://www.facebook.com/profile.php?id=61558540708282",
+              "https://www.youtube.com/channel/UCUOszJIYskBMjPTmYxr-f1A"
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "enrollment",
+                "email": "maxbyteplacement@gmail.com",
+                "telephone": "+917545840365",
+                "description": "Enrollment and general inquiries"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "url": "https://wa.me/7545840365",
+                "description": "WhatsApp contact for quick support"
+              }
+            ]
+          })}
+        </script>
+      </Head>
 
       <motion.section
         initial="hidden"
@@ -175,7 +160,6 @@ const Hero = () => {
         variants={containerVariants}
         className="container mx-auto px-4 py-16 md:py-24 lg:py-32"
         aria-labelledby="hero-heading"
-       // Add space for fixed navbar
       >
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12 xl:gap-16">
           {/* Left Content */}
@@ -263,13 +247,12 @@ const Hero = () => {
                   whileHover={{ y: -5 }}
                   className="flex gap-2 items-center bg-white p-2 sm:p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow text-sm sm:text-base"
                 >
-                  <img 
+                  <Image
                     src={item.icon} 
                     alt={item.alt}
+                    width={24}
+                    height={24}
                     className="w-5 h-5 sm:w-6 sm:h-6"
-                    loading="lazy"
-                    width="24"
-                    height="24"
                   />
                   <p className="text-gray-700">{item.text}</p>
                 </motion.div>
@@ -284,15 +267,16 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="relative w-full lg:w-1/2 mb-8 lg:mb-0 order-1 lg:order-2"
           >
-            <motion.img
-              src="/assets/hero.png"
-              alt="Students learning and advancing their careers at MaxByte Placement Academy"
-              className="w-full max-w-md lg:max-w-xl rounded-xl shadow-2xl mx-auto"
-              whileHover={{ scale: 1.02 }}
-              loading="eager"
-              width="600"
-              height="400"
-            />
+            <div className="w-full max-w-md lg:max-w-xl rounded-xl shadow-2xl mx-auto overflow-hidden">
+              <Image
+                src="/assets/hero.png"
+                alt="Students learning and advancing their careers at MaxByte Placement Academy"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}

@@ -1,15 +1,18 @@
-import React from 'react'
-import { IoIosArrowForward } from 'react-icons/io'
-import { useRouter } from "next/router"
-import Head from 'next/head'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { IoIosArrowForward } from 'react-icons/io';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Services = () => {
-    const router = useRouter()
+    const router = useRouter();
+    const [imageErrors, setImageErrors] = React.useState({});
+    const [imagesLoaded, setImagesLoaded] = React.useState({});
     
     const handleServiceClick = (id) => {
-        router.push(`/course/${id}`)
-    }
+        router.push(`/course/${id}`);
+    };
 
     const services = [
         {
@@ -19,7 +22,8 @@ const Services = () => {
             sub: 'Learn essential computer skills, AI tools, and smart productivity techniques. Ideal for beginners stepping into the digital world.',
             category: 'Computer Basics',
             duration: '8 weeks',
-            bgColor: 'from-purple-500 to-indigo-500'
+            bgColor: 'from-purple-500 to-indigo-500',
+            badgeColor: 'text-purple-500 bg-purple-500/10'
         },
         {
             id: 2,
@@ -28,7 +32,8 @@ const Services = () => {
             sub: 'Get job-ready with resume building, mock interviews, and direct company connections.',
             category: 'Career',
             duration: '12 weeks',
-            bgColor: 'from-blue-500 to-cyan-500'
+            bgColor: 'from-blue-500 to-cyan-500',
+            badgeColor: 'text-blue-500 bg-blue-500/10'
         },
         {
             id: 3,
@@ -37,7 +42,8 @@ const Services = () => {
             sub: 'Build responsive websites with React, Node.js, and MongoDB. Includes real-world projects for your portfolio.',
             category: 'Development',
             duration: '6 weeks',
-            bgColor: 'from-green-500 to-emerald-500'
+            bgColor: 'from-green-500 to-emerald-500',
+            badgeColor: 'text-green-500 bg-green-500/10'
         },
         {
             id: 4,
@@ -46,7 +52,8 @@ const Services = () => {
             sub: 'Learn SEO, social media marketing, and Google Analytics from industry experts.',
             category: 'Marketing',
             duration: '10 weeks',
-            bgColor: 'from-red-500 to-pink-500'
+            bgColor: 'from-red-500 to-pink-500',
+            badgeColor: 'text-red-500 bg-red-500/10'
         },
         { 
             id: 5,
@@ -55,7 +62,8 @@ const Services = () => {
             sub: 'Comprehensive training in accounting principles and Tally ERP 9 software.',
             category: 'Finance',
             duration: '8 weeks',
-            bgColor: 'from-amber-500 to-yellow-500'
+            bgColor: 'from-amber-500 to-yellow-500',
+            badgeColor: 'text-amber-500 bg-amber-500/10'
         },
         {
             id: 6,
@@ -64,7 +72,8 @@ const Services = () => {
             sub: 'Deploy and manage applications on AWS cloud infrastructure. Includes certification prep.',
             category: 'Cloud',
             duration: '10 weeks',
-            bgColor: 'from-sky-500 to-blue-400'
+            bgColor: 'from-sky-500 to-blue-400',
+            badgeColor: 'text-sky-500 bg-sky-500/10'
         },
         {
             id: 7,
@@ -73,9 +82,10 @@ const Services = () => {
             sub: 'Hands-on training in Python, TensorFlow, and neural networks for real-world applications.',
             category: 'Data Science',
             duration: '14 weeks',
-            bgColor: 'from-violet-500 to-fuchsia-500'
+            bgColor: 'from-violet-500 to-fuchsia-500',
+            badgeColor: 'text-violet-500 bg-violet-500/10'
         }
-    ]
+    ];
 
     // Animation variants
     const container = {
@@ -87,7 +97,7 @@ const Services = () => {
                 delayChildren: 0.3
             }
         }
-    }
+    };
 
     const item = {
         hidden: { opacity: 0, y: 30 },
@@ -100,7 +110,14 @@ const Services = () => {
                 damping: 15
             } 
         }
-    }
+    };
+
+    // Fallback component for images
+    const ImageFallback = ({ service }) => (
+        <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+            <span className="text-xs">{service.category[0]}</span>
+        </div>
+    );
 
     return (
         <>
@@ -117,6 +134,24 @@ const Services = () => {
                 <meta property="og:title" content="Premium Career-Focused Courses | Learn In-Demand Skills" />
                 <meta property="og:description" content="Join our practical training programs designed by industry experts to bridge the skills gap." />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "ItemList",
+                        itemListElement: services.map((service, index) => ({
+                            "@type": "ListItem",
+                            position: index + 1,
+                            item: {
+                                "@type": "Course",
+                                name: service.title,
+                                description: service.sub,
+                                provider: "MaxByte Placement Academy"
+                            }
+                        }))
+                    })}
+                </script>
             </Head>
 
             <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20'>
@@ -184,17 +219,28 @@ const Services = () => {
                             <div className="flex flex-col h-full">
                                 <div className="flex gap-3 md:gap-4 items-start mb-4 md:mb-5">
                                     <div className={`p-2 md:p-3 bg-purple-50 group-hover:bg-white rounded-lg md:rounded-xl transition-all duration-300 group-hover:scale-110`}>
-                                        <img 
-                                            src={service.img} 
-                                            alt={service.title} 
-                                            className='w-8 h-8 md:w-10 md:h-10 object-contain' 
-                                            loading="lazy"
-                                            width={40}
-                                            height={40}
-                                        />
+                                        {imageErrors[service.id] ? (
+                                            <ImageFallback service={service} />
+                                        ) : (
+                                            <>
+                                                {!imagesLoaded[service.id] && (
+                                                    <div className="animate-pulse bg-gray-200 w-8 h-8 md:w-10 md:h-10 rounded-lg" />
+                                                )}
+                                                <Image 
+                                                    src={service.img}
+                                                    alt={service.title}
+                                                    width={40}
+                                                    height={40}
+                                                    className={`w-8 h-8 md:w-10 md:h-10 object-contain ${imagesLoaded[service.id] ? 'opacity-100' : 'opacity-0'}`}
+                                                    priority={service.id <= 3}
+                                                    onLoad={() => setImagesLoaded(prev => ({...prev, [service.id]: true}))}
+                                                    onError={() => setImageErrors(prev => ({...prev, [service.id]: true}))}
+                                                />
+                                            </>
+                                        )}
                                     </div>
                                     <div>
-                                        <span className={`text-xs font-semibold text-${service.bgColor.split(' ')[0].replace('from-', '')} bg-${service.bgColor.split(' ')[0].replace('from-', '')}/10 px-2 py-1 rounded-full`}>
+                                        <span className={`${service.badgeColor} text-xs font-semibold px-2 py-1 rounded-full`}>
                                             {service.category}
                                         </span>
                                         <h2 className='text-lg md:text-xl font-bold text-gray-800 group-hover:text-white mt-1 md:mt-2 transition-colors duration-300 line-clamp-2'>
@@ -224,11 +270,9 @@ const Services = () => {
                         </motion.div>
                     ))}
                 </motion.div>
-
-              
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Services
+export default Services;

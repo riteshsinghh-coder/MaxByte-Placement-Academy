@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Image from "next/image"; // Added Next.js Image import
 
 const CourseDetails = () => {
   const router = useRouter();
@@ -10,8 +11,10 @@ const CourseDetails = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [mounted, setMounted] = useState(false); // Added for hydration fix
 
   useEffect(() => {
+    setMounted(true);
     const fetchCourseDetails = async () => {
       try {
         setLoading(true);
@@ -23,8 +26,8 @@ const CourseDetails = () => {
         // Mock data - replace with your actual API call
         const mockCourse = {
           id,
-          title: `Advanced ${id.toUpperCase()} Programming`,
-          description: `Master ${id.toUpperCase()} with this comprehensive course covering all advanced concepts and practical applications.`,
+          title: `Advanced ${id?.toUpperCase()} Programming`,
+          description: `Master ${id?.toUpperCase()} with this comprehensive course covering all advanced concepts and practical applications.`,
           instructor: "Dr. Sarah Johnson",
           price: "$199.99",
           duration: "8 weeks",
@@ -53,6 +56,10 @@ const CourseDetails = () => {
       fetchCourseDetails();
     }
   }, [id]);
+
+  if (!mounted) {
+    return null; // Return null during SSR to prevent hydration mismatch
+  }
 
   if (loading) {
     return (
@@ -136,11 +143,15 @@ const CourseDetails = () => {
                 whileHover={{ scale: 1.005 }}
                 className="bg-white rounded-xl shadow-lg overflow-hidden mb-8"
               >
-                <img 
-                  src={course.thumbnail} 
-                  alt={course.title}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="w-full h-64 relative"> {/* Changed to Next.js Image */}
+                  <Image
+                    src={course.thumbnail}
+                    alt={course.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 66vw"
+                  />
+                </div>
                 <div className="p-6">
                   <motion.p 
                     whileHover={{ color: "#4F46E5" }}

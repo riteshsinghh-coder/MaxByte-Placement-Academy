@@ -3,10 +3,11 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Head from 'next/head';
+import Image from "next/image";
 
 const Footer = () => {
   // Current year for copyright
-  const currentYear = 2024
+  const currentYear = 2024;
 
   // Social media URLs
   const socialLinks = [
@@ -31,7 +32,6 @@ const Footer = () => {
   ];
 
   // Footer links data
-  // "Policies" is now a standard section within this array
   const footerLinks = [
     {
       title: "Company",
@@ -60,14 +60,12 @@ const Footer = () => {
         { name: "Support", url: "/support" }
       ]
     },
-    // NEW SECTION: Policies as a standard link column
     {
       title: "Policies",
       links: [
         { name: "Terms & Conditions", url: "/terms" },
         { name: "Privacy Policy", url: "/privacy" },
         { name: "Cookie Policy", url: "/cookies" },
-        // If there were other policies, they would go here
       ]
     }
   ];
@@ -121,15 +119,9 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
             variants={containerVariants}
-            // IMPORTANT CHANGE: Grid columns adjusted to get all 5 items in one row on large screens
-            // Mobile: 1 column
-            // Medium (md): 2 columns (Logo/newsletter spans 2, then others flow into 2 columns)
-            // Large (lg) and up: 5 columns (1 for logo, 4 for link sections)
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12"
           >
             {/* Logo, Description, and Newsletter Subscription */}
-            {/* On md: takes full width (2 columns).
-                On lg: takes 1 column. This is crucial for the 5-column layout. */}
             <motion.div
               variants={itemVariants}
               className="md:col-span-2 lg:col-span-1 flex flex-col gap-4"
@@ -138,13 +130,12 @@ const Footer = () => {
                 whileHover={{ scale: 1.03 }}
                 className="flex justify-center md:justify-start"
               >
-                <img
+                <Image
                   src="/assets/logo.png"
                   alt="MaxByte Placement Academy Logo"
+                  width={160}  // Required
+                  height={96}  // Required
                   className="w-40 h-auto"
-                  width={160}
-                  height={96}
-                  loading="lazy"
                 />
               </motion.div>
               <p className="text-gray-300 leading-relaxed text-center md:text-left">
@@ -173,15 +164,12 @@ const Footer = () => {
               </div>
             </motion.div>
 
-            {/* Footer Links (Company, Legal, Resources, AND NOW Policies) */}
-            {/* Each of these sections will naturally take 1 column in a grid.
-                On md: the layout will wrap to 2 columns after the logo, then the 3 link groups and Policies will distribute.
-                On lg: each will take 1 of the 5 columns. */}
+            {/* Footer Links */}
             {footerLinks.map((section, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="flex flex-col gap-4" // Each takes 1 grid column naturally
+                className="flex flex-col gap-4"
               >
                 <h3 className="text-lg font-semibold text-center md:text-left">{section.title}</h3>
                 <ul className="space-y-3">
@@ -198,23 +186,15 @@ const Footer = () => {
                         aria-label={link.name}
                       >
                         {link.name}
-                        {/* Only show arrow for external/non-policy links if desired, otherwise remove */}
-                        {/* <BsArrowUpRight className="text-xs opacity-0 group-hover:opacity-100 transition-opacity" /> */}
                       </a>
                     </motion.li>
                   ))}
                 </ul>
               </motion.div>
             ))}
-
-            {/* The separate Policies section is now REMOVED as it's integrated above */}
-            {/* If you specifically want to render the policies with a bullet point and description,
-                you would need a different structure within the 'link' object for 'Policies'
-                and a conditional render in the map function. */}
-
           </motion.div>
 
-          {/* Bottom Bar - Stack on mobile, row on desktop */}
+          {/* Bottom Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -236,7 +216,7 @@ const Footer = () => {
                   aria-label={social.ariaLabel}
                   whileHover={{
                     y: -3,
-                    color: "#8B5CF6", // Tailwind purple-400 equivalent for a nicer hover effect
+                    color: "#8B5CF6",
                     transition: { duration: 0.2 }
                   }}
                   whileTap={tapEffect}

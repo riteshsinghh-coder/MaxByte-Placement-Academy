@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { FaPhone, FaEnvelope, FaWhatsapp, FaBars, FaTimes, FaUserGraduate } from 'react-icons/fa';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from "next/image"; // Added Next.js Image import
 
 // Modal component with animations and accessibility features
 const Modal = ({ isOpen, onClose, title, content }) => {
@@ -274,7 +275,7 @@ const NavBar = () => {
             {/* Logo with Link to Home */}
             <Link href="/" passHref legacyBehavior>
               <a className="flex items-center" aria-label="MaxByte Placement Academy Home">
-                <img 
+                <Image 
                   src="/assets/logo.png" 
                   alt="MaxByte Placement Academy Logo" 
                   className="h-16 md:h-20 w-auto transition-all duration-300 hover:opacity-90"

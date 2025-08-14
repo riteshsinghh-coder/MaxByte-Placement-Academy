@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Placed = () => {
   const students = [
@@ -61,7 +62,7 @@ const Placed = () => {
   return (
     <>
       <Head>
-        <title>Our Placed Students | MaxByte Placement Academy | Best Computer Center </title>
+        <title>Our Placed Students | MaxByte Placement Academy | Best Computer Center</title>
         <meta 
           name="description" 
           content="See our successfully placed students and their achievements at MaxByte Placement Academy" 
@@ -100,14 +101,16 @@ const Placed = () => {
               <div className="p-6 flex flex-col items-center">
                 <div className="relative mb-6 group">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
-                  <img 
-                    className="w-40 h-40 rounded-full object-cover border-4 border-white shadow-md group-hover:border-purple-200 transition-all duration-300"
-                    src={student.img} 
-                    alt={`${student.title} - Placed at ${student.company}`}
-                    width={160}
-                    height={160}
-                    loading={index < 4 ? "eager" : "lazy"}
-                  />
+                  <div className="w-40 h-40 relative">
+                    <Image
+                      className="rounded-full object-cover border-4 border-white shadow-md group-hover:border-purple-200 transition-all duration-300"
+                      src={student.img} 
+                      alt={`${student.title} - Placed at ${student.company}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority={index < 4}
+                    />
+                  </div>
                 </div>
                 
                 <h3 className="text-xl font-bold text-gray-800 mb-1 text-center">
@@ -117,14 +120,17 @@ const Placed = () => {
                   Placed at
                 </p>
                 
-                <div className="flex items-center justify-center bg-gray-50 p-3 rounded-lg w-full">
-                  <img 
-                    src={student.logoUrl} 
-                    alt={`${student.company} logo`}
-                    className="h-10 max-w-full object-contain"
-                    loading="lazy"
-                  />
-                  <span className="sr-only">{student.company}</span>
+                <div className="flex items-center justify-center bg-gray-50 p-3 rounded-lg w-full h-16">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={student.logoUrl} 
+                      alt={`${student.company} logo`}
+                      fill
+                      style={{ objectFit: "contain" }}
+                      sizes="(max-width: 768px) 100px, 150px"
+                      priority={index < 2}
+                    />
+                  </div>
                 </div>
               </div>
             </motion.div>
