@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+  PYTHON_VERSION = "3.11"
+
+[build.cache]
+  paths = ["node_modules/.cache", ".next/cache"]
