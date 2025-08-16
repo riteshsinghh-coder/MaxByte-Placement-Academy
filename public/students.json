@@ -41,7 +41,7 @@
     },
      {
       "uid": "BF002",
-      "name": "Shyam",
+      "name": "Shyam Upadhyay",
       "fatherName": "Sanjeev Upadhyay",
       "gender": "Male",
       "mobile": "+91 7703840961",
@@ -67,8 +67,8 @@
     },
      {
       "uid": "BF007",
-      "name": "Bhumi",
-      "fatherName": "Vishnu Pathak",
+      "name": "Bhumika",
+      "fatherName":"Vishnu Pathak",
       "gender": "Female",
       "mobile": "+91 9711729578",
       "dob": "2010-03-22",
@@ -93,7 +93,7 @@
     },
      {
       "uid": "BF014",
-      "name": "Saloni Kumari",
+      "name": "Saloni",
       "fatherName": "Vicky Shah",
       "gender": "Female",
       "mobile": "+91 9560177515",
@@ -277,7 +277,7 @@
       "uid": "BF048",
       "name": "Divyanshu",
       "fatherName": "Vijay Kumar",
-      "gender": "Female",
+      "gender": "Male",
       "mobile": "+91 9654390869",
       "dob": "2009-01-20",
       "course": "Basic computer+AI",
@@ -315,7 +315,7 @@
     {
       "uid": "BF011",
       "name": "Ritu",
-      "fatherName": "Krishan Dutt Sharma",
+      "fatherName": "Kishan Dutt Sharma",
       "gender": "Female",
       "mobile": "+91 9625295839",
       "dob": "2004-07-15",
@@ -328,7 +328,7 @@
     {
       "uid": "BF012",
       "name": "Chanchal Sharma",
-      "fatherName": "Krishan Dutt Sharma",
+      "fatherName": "Kishan Dutt Sharma",
       "gender": "Female",
       "mobile": "+91 9625295839",
       "dob": "2008-10-09",
@@ -366,7 +366,7 @@
     },
     {
       "uid": "BF021",
-      "name": "Jatin Kumar",
+      "name": "Jatin ",
       "fatherName": "Sarwan Kumar",
       "gender": "Male",
       "mobile": "+91 85859557825",
