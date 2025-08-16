@@ -3,22 +3,18 @@ import { useRouter } from 'next/router';
 import { FaPhone, FaEnvelope, FaWhatsapp, FaBars, FaTimes, FaUserGraduate } from 'react-icons/fa';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from "next/image"; // Added Next.js Image import
+import Image from "next/image";
 
-// Modal component with animations and accessibility features
 const Modal = ({ isOpen, onClose, title, content }) => {
-  // Function to handle phone call
   const handlePhoneCall = () => {
     window.location.href = 'tel:+917545840365';
   };
 
-  // Function to handle WhatsApp message
   const handleWhatsAppMessage = () => {
     const message = encodeURIComponent('Welcome to MaxByte Placement Academy. We offer comprehensive IT education and career placement services.');
     window.open(`https://wa.me/917545840365?text=${message}`, '_blank');
   };
 
-  // Close modal when pressing Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
@@ -27,12 +23,10 @@ const Modal = ({ isOpen, onClose, title, content }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [onClose]);
 
-  // Trap focus inside modal for accessibility
   useEffect(() => {
     if (isOpen) {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const modal = document.querySelector('#contact-modal');
-      // Ensure modal exists before trying to query its elements
       if (modal) { 
         const focusableContent = modal.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0];
@@ -54,7 +48,6 @@ const Modal = ({ isOpen, onClose, title, content }) => {
           }
         };
 
-        // Only try to focus if there's a first focusable element
         if (firstFocusableElement) {
             firstFocusableElement.focus();
         }
@@ -144,7 +137,6 @@ const NavBar = () => {
     content: 'Feel free to reach us via phone, WhatsApp, or email.' 
   });
 
-  // Handle scroll effect for navbar
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -153,7 +145,6 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
   useEffect(() => {
     const handleRouteChange = () => {
       setIsMobileMenuOpen(false);
@@ -174,120 +165,69 @@ const NavBar = () => {
   return (
     <>
       <Head>
-  <title>MaxByte Placement Academy | IT Education, Coaching & Digital Marketing in Faridabad</title>
-  <meta
-    name="description"
-    content="MaxByte Placement Academy offers top-notch IT education, school tuition (5th–10th), and digital marketing training in Faridabad. Join our Coaching Institute or Digital Hub to level up your future."
-  />
-  <meta
-    name="keywords"
-    content="IT education Faridabad, coaching institute 5th to 10th, tuition classes in Faridabad, digital marketing training, SEO courses, social media marketing Faridabad, best coaching Faridabad, MaxByte"
-  />
-  <meta name="author" content="MaxByte Placement Academy" />
-
-  {/* Open Graph */}
-  <meta property="og:title" content="MaxByte Placement Academy - Coaching & Digital Training in Faridabad" />
-  <meta property="og:description" content="Coaching for classes 5–10 and digital marketing training. Trusted by hundreds in Faridabad." />
-  <meta property="og:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
-  <meta property="og:url" content="https://maxbyteplacementacademy.in" />
-  <meta property="og:type" content="website" />
-
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MaxByte Placement Academy - Coaching & Digital Training" />
-  <meta name="twitter:description" content="Join our school coaching and digital hub in Faridabad. Practical education for students and professionals." />
-  <meta name="twitter:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
-
-  <link rel="canonical" href="https://maxbyteplacementacademy.in" />
-  <link rel="preload" href="/assets/logo.png" as="image" />
-
-  {/* Schema.org - Main Academy */}
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "MaxByte Placement Academy",
-      "url": "https://maxbyteplacementacademy.in",
-      "logo": "https://maxbyteplacementacademy.in/assets/logo.png",
-      "description": "IT education, student coaching (5th–10th), and digital marketing training in Faridabad.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+917545840365",
-        "contactType": "Customer Service",
-        "email": "maxbyteplacementacademy@gmail.com",
-        "areaServed": "India"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Faridabad",
-        "addressRegion": "Haryana",
-        "addressCountry": "India"
-      }
-    })}
-  </script>
-
-  {/* Schema - MaxByte Coaching Institute */}
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "MaxByte Coaching Institute",
-      "url": "https://maxbytecoachinginstitute.maxbyteplacementacademy.in",
-      "description": "Best coaching institute for classes 5 to 10 in Faridabad with expert faculty and proven results.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Faridabad",
-        "addressRegion": "Haryana",
-        "addressCountry": "India"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+917545840365",
-        "contactType": "Customer Service"
-      }
-    })}
-  </script>
-
-  {/* Schema - MaxByte Digital Hub */}
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MaxByte Digital Hub",
-      "url": "https://maxbyteplacementacademy.in",
-      "description": "Faridabad’s leading digital marketing training institute offering SEO, Google Ads, social media, and freelancing skills.",
-      "sameAs": [
-        "https://www.facebook.com/maxbyteplacementacademy",
-        "https://www.instagram.com/maxbyteplacementacademy"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+917545840365",
-        "contactType": "Customer Service"
-      }
-    })}
-  </script>
-</Head>
+        <title>MaxByte Placement Academy | IT Education, Coaching & Digital Marketing in Faridabad</title>
+        <meta
+          name="description"
+          content="MaxByte Placement Academy offers top-notch IT education, school tuition (5th–10th), and digital marketing training in Faridabad."
+        />
+        <meta
+          name="keywords"
+          content="IT education Faridabad, coaching institute 5th to 10th, tuition classes in Faridabad, digital marketing training, SEO courses, social media marketing Faridabad, best coaching Faridabad, MaxByte"
+        />
+        <meta name="author" content="MaxByte Placement Academy" />
+        <meta property="og:title" content="MaxByte Placement Academy - Coaching & Digital Training in Faridabad" />
+        <meta property="og:description" content="Coaching for classes 5–10 and digital marketing training. Trusted by hundreds in Faridabad." />
+        <meta property="og:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
+        <meta property="og:url" content="https://maxbyteplacementacademy.in" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="MaxByte Placement Academy - Coaching & Digital Training" />
+        <meta name="twitter:description" content="Join our school coaching and digital hub in Faridabad. Practical education for students and professionals." />
+        <meta name="twitter:image" content="https://maxbyteplacementacademy.in/assets/logo.png" />
+        <link rel="canonical" href="https://maxbyteplacementacademy.in" />
+        <link rel="preload" href="/assets/logo.png" as="image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "MaxByte Placement Academy",
+            "url": "https://maxbyteplacementacademy.in",
+            "logo": "https://maxbyteplacementacademy.in/assets/logo.png",
+            "description": "IT education, student coaching (5th–10th), and digital marketing training in Faridabad.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+917545840365",
+              "contactType": "Customer Service",
+              "email": "maxbyteplacementacademy@gmail.com",
+              "areaServed": "India"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Faridabad",
+              "addressRegion": "Haryana",
+              "addressCountry": "India"
+            }
+          })}
+        </script>
+      </Head>
 
       <header className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-1' : 'bg-white/95 py-2'}`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Logo with Link to Home */}
             <Link href="/" passHref legacyBehavior>
               <a className="flex items-center" aria-label="MaxByte Placement Academy Home">
                 <Image 
                   src="/assets/logo.png" 
                   alt="MaxByte Placement Academy Logo" 
-                  className="h-16 md:h-20 w-auto transition-all duration-300 hover:opacity-90"
-                  width={120}
+                  width={160}
                   height={80}
-                  loading="eager"
+                  className="h-16 md:h-20 w-auto transition-all duration-300 hover:opacity-90"
+                  priority
                 />
                 <span className="sr-only">MaxByte Placement Academy</span>
               </a>
             </Link>
 
-            {/* Desktop Navigation */}
             <nav aria-label="Main navigation" className="hidden md:flex items-center space-x-6">
               <Link href="/about" passHref legacyBehavior>
                 <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
@@ -317,7 +257,6 @@ const NavBar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
               </button>
 
-              {/* Student Portal Link */}
               <a
                 href="https://app.maxbyteplacementacademy.in"
                 target="_blank"
@@ -331,7 +270,6 @@ const NavBar = () => {
               </a>
             </nav>
 
-            {/* Mobile Menu Button */}
             <button 
               className="md:hidden p-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-md"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -347,7 +285,6 @@ const NavBar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu */}
           <div 
             id="mobile-menu"
             className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
@@ -361,16 +298,14 @@ const NavBar = () => {
                   About Us
                 </a>
               </Link>
-               <Link href="https://maxbytecoachinginstitute.maxbyteplacementacademy.in/" passHref legacyBehavior>
-                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+              <Link href="https://maxbytecoachinginstitute.maxbyteplacementacademy.in/" passHref legacyBehavior>
+                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 py-2">
                   Maxbyte Coaching Intitute
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </Link>
               <Link href="" passHref legacyBehavior>
-                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 relative group">
+                <a className="text-gray-700 hover:text-purple-600 font-medium transition-colors duration-300 py-2">
                   Maxbyte Digital Hub
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </Link>
               <button 
@@ -383,7 +318,6 @@ const NavBar = () => {
                 Contact Us
               </button>
 
-              {/* Mobile Student Portal Link */}
               <a
                 href="https://app.maxbyteplacementacademy.in"
                 target="_blank"
@@ -399,7 +333,6 @@ const NavBar = () => {
         </div>
       </header>
 
-      {/* Modal */}
       <Modal 
         isOpen={isModalOpen} 
         onClose={closeModal} 

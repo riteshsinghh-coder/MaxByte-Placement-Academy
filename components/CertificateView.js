@@ -47,7 +47,7 @@ export default function CertificateView({ student }) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-blue-50 p-6 rounded-lg border border-blue-100">
           <div>
             <h4 className="text-lg font-semibold text-blue-900 mb-3 border-b border-blue-200 pb-1">Personal Details</h4>
-            <p className="text-gray-700 mb-2"><span className="font-medium text-blue-800">Father's Name:</span> {student.fatherName}</p>
+            <p className="text-gray-700 mb-2"><span className="font-medium text-blue-800">Father&apos;s Name:</span> {student.fatherName}</p>
             <p className="text-gray-700 mb-2"><span className="font-medium text-blue-800">Date of Birth:</span> {student.dob ? new Date(student.dob).toLocaleDateString() : 'N/A'}</p>
             <p className="text-gray-700"><span className="font-medium text-blue-800">Gender:</span> {student.gender}</p>
           </div>
@@ -73,20 +73,20 @@ export default function CertificateView({ student }) {
             </div>
             
             <div className="text-center">
-  {/* Signature Image with placeholder - replace with your actual signature image */}
-  <div className="mb-2">
-    <Image 
-      src="/assets/sign.jpg" // Replace with your actual signature image path
-      alt="Authorized Signature"
-      width={120}
-      height={60}
-      className="mx-auto h-16 object-contain"
-    />
-  </div>
-  <div className="h-0.5 w-32 bg-blue-300 mx-auto mb-2"></div>
-  <p className="text-sm text-gray-600">Authorized Signature</p>
-  <p className="text-xs text-gray-500 mt-1">Director, MaxByte Placement Academy</p>
-</div>
+              {/* Signature Image with placeholder - replace with your actual signature image */}
+              <div className="mb-2">
+                <Image 
+                  src="/assets/sign.jpg" // Replace with your actual signature image path
+                  alt="Authorized Signature"
+                  width={120}
+                  height={60}
+                  className="mx-auto h-16 object-contain"
+                />
+              </div>
+              <div className="h-0.5 w-32 bg-blue-300 mx-auto mb-2"></div>
+              <p className="text-sm text-gray-600">Authorized Signature</p>
+              <p className="text-xs text-gray-500 mt-1">Director, MaxByte Placement Academy</p>
+            </div>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function CertificateView({ student }) {
         <p className="font-mono text-blue-200 break-all text-sm">
           {typeof window !== 'undefined' ? window.location.href : 'Loading...'}
         </p>
-     </div>
+      </div>
     </div>
   );
 }
