@@ -93,7 +93,7 @@
     },
     {
       "uid": "PY009",
-      "name": "Sachin ",
+      "name": "Sachin Chaudhary ",
       "fatherName": "Surender Singh",
       "gender": "Male",
       "mobile": "+91 8585935586",
@@ -249,8 +249,8 @@
     },
     {
       "uid": "PY023",
-      "name": "Dhruv Kiran",
-      "fatherName": "Vishnu kiran",
+      "name": "Dhruv Kirad",
+      "fatherName": "Vishnu kirad",
       "gender": "Male",
       "mobile": "+91 8506949166",
       "dob": "2011-03-18",
@@ -301,7 +301,7 @@
     },
     {
       "uid": "PY031",
-      "name": "Dhruv",
+      "name": "Dhroov",
       "fatherName": "Sita Ram",
       "gender": "Male",
       "mobile": "+91 7004048184",
@@ -497,7 +497,7 @@
     {
       "uid": "BP054",
       "name": "Shreekant Giri",
-      "fatherName": "Banny Mehra",
+      "fatherName": "Ramjanam Giri ",
       "gender": "Male",
       "mobile": "+91 8112743107",
       "dob": "1990-02-27",
@@ -535,7 +535,7 @@
     },
     {
       "uid": "BP057",
-      "name": "Bittu",
+      "name": "Bittu Kumar",
       "fatherName": "Sardar Singh",
       "gender": "Male",
       "mobile": "+91 9958954985",
